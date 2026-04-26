@@ -5,11 +5,11 @@
   --color-foreground: var(--foreground);
   
   --color-brand-black: #030806;
-  --color-brand-dark: #05100c;
-  --color-brand-green: #0d2f23;
-  --color-brand-green-light: #164936;
-  --color-brand-gold: #d4b475;
-  --color-brand-gold-light: #f3d99e;
+  --color-brand-dark: #0f172a;
+  --color-brand-green: #115e59;
+  --color-brand-green-light: #f0fdf4;
+  --color-brand-gold: #b45309;
+  --color-brand-gold-light: #fef3c7;
   
   --font-sans: var(--font-outfit), sans-serif;
   
@@ -17,8 +17,8 @@
 }
 
 :root {
-  --background: #030806;
-  --foreground: #f1f5f2;
+  --background: #fdfdfd;
+  --foreground: #020617;
 }
 
 body {
@@ -29,17 +29,19 @@ body {
 }
 
 .glass {
-  background: rgba(13, 47, 35, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 180, 117, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(17, 94, 89, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
 }
 
 .glass-gold {
-  background: rgba(212, 180, 117, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 180, 117, 0.2);
+  background: rgba(254, 243, 199, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(180, 83, 9, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(180, 83, 9, 0.05);
 }
 
 /* Scrollbar styles */
@@ -48,16 +50,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #030806;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #164936;
+  background: #cbd5e1;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4b475;
+  background: #b45309;
 }
 
 @keyframes shine {

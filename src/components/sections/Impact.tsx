@@ -40,12 +40,12 @@ export default function Impact() {
   ];
 
   return (
-    <section id="impact" className="py-40 relative bg-brand-dark overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888078-43d810842a5a?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-[0.03] mix-blend-luminosity pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-[#05100c]/80 to-brand-black pointer-events-none" />
+    <section id="impact" className="py-40 relative bg-white overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888078-43d810842a5a?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-[0.05] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white pointer-events-none" />
 
       {/* Decorative Grid SVG */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #115e59 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-10">
@@ -54,10 +54,10 @@ export default function Impact() {
               <BarChart3 className="text-brand-gold w-5 h-5" />
               <h2 className="text-brand-gold uppercase tracking-[0.25em] text-xs font-bold">Proven Track Record</h2>
             </div>
-            <h3 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-              Execution Over <br /><span className="text-white/40 italic font-light">Rhetoric</span>
+            <h3 className="text-5xl md:text-6xl font-bold text-foreground mb-6 tracking-tight leading-tight">
+              Execution Over <br /><span className="text-foreground/20 italic font-light">Rhetoric</span>
             </h3>
-            <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
+            <p className="text-foreground/60 text-lg md:text-xl font-medium leading-relaxed">
               We are building a future where the youth of Etsako Central lead in the digital economy. Through specialized training, tech infrastructure, and direct workspace empowerment, we are transforming potential into world-class excellence.
             </p>
           </div>
@@ -70,7 +70,7 @@ export default function Impact() {
               className="w-24 h-24 rounded-full border border-brand-gold/30 flex items-center justify-center relative spin-slow"
             >
               <div className="absolute inset-2 border border-dashed border-brand-gold/40 rounded-full" />
-              <div className="w-12 h-1 bg-brand-gold blur-sm rotate-45" />
+              <div className="w-12 h-1 bg-brand-gold blur-[2px] rotate-45" />
             </motion.div>
           </div>
         </div>
@@ -83,29 +83,29 @@ export default function Impact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: i * 0.1, duration: 0.8, ease: "easeOut" }}
-              className="glass p-8 rounded-[30px] border border-brand-green-light/20 relative group overflow-hidden"
+              className="glass p-8 rounded-[30px] border border-foreground/5 relative group overflow-hidden shadow-sm"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-brand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
-                <div className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter flex items-end">
-                  <span className="bg-gradient-to-br from-white to-brand-gold text-transparent bg-clip-text drop-shadow-[0_0_15px_rgba(212,180,117,0.2)]">
+                <div className="text-5xl md:text-6xl font-black text-foreground mb-8 tracking-tighter flex items-end">
+                  <span className="bg-gradient-to-br from-foreground to-brand-gold text-transparent bg-clip-text drop-shadow-sm">
                     <Counter to={stat.value} duration={2.5} />
                   </span>
                   <span className="text-brand-gold text-4xl">{stat.suffix}</span>
                 </div>
 
-                <div className="h-1.5 w-full bg-black/40 rounded-full overflow-hidden mb-6 filter drop-shadow-sm">
+                <div className="h-1.5 w-full bg-foreground/5 rounded-full overflow-hidden mb-6 filter drop-shadow-sm">
                   <motion.div 
                     initial={{ width: 0 }}
                     whileInView={{ width: `${(stat.value / stat.max) * 100}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.5, delay: 0.5 + (i * 0.1), ease: "easeOut" }}
-                    className="h-full bg-gradient-to-r from-brand-green-light to-brand-gold rounded-full"
+                    className="h-full bg-gradient-to-r from-brand-green to-brand-gold rounded-full"
                   />
                 </div>
 
-                <div className="text-sm md:text-base font-bold text-white/80 uppercase tracking-widest leading-snug">
+                <div className="text-sm md:text-base font-bold text-foreground/80 uppercase tracking-widest leading-snug">
                   {stat.label}
                 </div>
               </div>

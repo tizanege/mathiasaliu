@@ -72,11 +72,11 @@ export default function Countdown() {
               {/* Outer glow effect */}
               <div className="absolute -inset-1 bg-brand-gold/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative min-w-[70px] md:min-w-[100px] h-20 md:h-28 flex flex-col items-center justify-center rounded-xl glass border border-white/5 group-hover:border-brand-gold/30 transition-all duration-500 overflow-hidden shadow-2xl backdrop-blur-2xl">
+              <div className="relative min-w-[70px] md:min-w-[100px] h-20 md:h-28 flex flex-col items-center justify-center rounded-xl glass border border-foreground/5 group-hover:border-brand-gold/30 transition-all duration-500 overflow-hidden shadow-2xl backdrop-blur-2xl">
                 {/* Subtle highlight */}
-                <div className="absolute top-0 left-0 w-full h-1/2 bg-white/[0.03]" />
+                <div className="absolute top-0 left-0 w-full h-1/2 bg-black/[0.02]" />
                 
-                <span className="text-3xl md:text-5xl font-bold text-white tracking-tighter tabular-nums drop-shadow-sm">
+                <span className="text-3xl md:text-5xl font-bold text-foreground tracking-tighter tabular-nums drop-shadow-sm">
                   {String(item.value).padStart(2, '0')}
                 </span>
                 

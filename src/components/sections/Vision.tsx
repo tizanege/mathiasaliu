@@ -10,35 +10,35 @@ export default function Vision() {
       subtitle: "The Foundation of the Future",
       description: "Bringing high-speed broadband and 24/7 power to tech campuses, enabling Etsako youth to work for the world’s biggest companies right from their hometown.",
       icon: Network,
-      color: "from-blue-900/50 to-brand-dark"
+      color: "from-blue-500/20 to-white"
     },
     {
       title: "Youth Enterprise",
       subtitle: "Wealth Creation at Scale",
       description: "Empowering young innovators with venture capital, modern cooperatives, and smart-farming tools. We transition from survival to global market dominance.",
       icon: Lightbulb,
-      color: "from-brand-green/50 to-brand-dark"
+      color: "from-brand-green/20 to-white"
     },
     {
       title: "Education Revolution",
       subtitle: "Building the Next Prodigies",
       description: "Transforming schools into premium hubs of coding, AI, and robotics. Equipping the next generation with world-class skills for a borderless world.",
       icon: GraduationCap,
-      color: "from-brand-gold/30 to-brand-dark"
+      color: "from-brand-gold/20 to-white"
     },
     {
       title: "Digital Governance",
       subtitle: "Radical Transparency",
       description: "An open-door policy backed by immutable digital systems, ensuring every resource is trackable by the people. No dark corners, only absolute clarity.",
       icon: ShieldCheck,
-      color: "from-purple-900/40 to-brand-dark"
+      color: "from-purple-500/20 to-white"
     }
   ];
 
   return (
-    <section id="vision" className="py-40 relative bg-brand-black overflow-hidden">
-      <div className="absolute inset-0 bg-[#05100c] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-green-light/20 via-transparent to-transparent pointer-events-none" />
-      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-gold/10 to-transparent pointer-events-none" />
+    <section id="vision" className="py-40 relative bg-white overflow-hidden">
+      <div className="absolute inset-0 bg-brand-green-light/30 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-gold/5 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-24 relative">
@@ -46,7 +46,7 @@ export default function Vision() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-gold/10 blur-[100px] rounded-full pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-gold/5 blur-[100px] rounded-full pointer-events-none"
           />
           
           <motion.div
@@ -67,10 +67,10 @@ export default function Vision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-white tracking-tight"
+            className="text-5xl md:text-7xl font-bold text-foreground tracking-tight"
           >
             A Vision for <br className="hidden md:block" />
-            <span className="bg-gradient-to-r from-brand-gold-light via-brand-gold to-yellow-600 bg-clip-text text-transparent italic">Exponential</span> Growth
+            <span className="bg-gradient-to-r from-brand-gold via-brand-gold to-yellow-800 bg-clip-text text-transparent italic">Exponential</span> Growth
           </motion.h3>
         </div>
 
@@ -83,31 +83,31 @@ export default function Vision() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" }}
               whileHover={{ y: -10 }}
-              className="group relative p-[1px] rounded-[32px] overflow-hidden bg-gradient-to-br from-white/10 via-transparent to-transparent shadow-2xl"
+              className="group relative p-[1px] rounded-[32px] overflow-hidden bg-gradient-to-br from-foreground/10 via-transparent to-transparent shadow-2xl"
             >
               {/* Dynamic Hover Gradient Border */}
               <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
               
-              <div className="relative h-full bg-[#040c09] rounded-[31px] p-10 md:p-12 transition-colors duration-500 overflow-hidden flex flex-col justify-between">
+              <div className="relative h-full bg-brand-green-light/20 rounded-[31px] p-10 md:p-12 transition-colors duration-500 overflow-hidden flex flex-col justify-between border border-foreground/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                 
                 {/* Background immense icon pattern */}
-                <div className="absolute right-0 top-0 translate-x-1/4 -translate-y-1/4 opacity-0 group-hover:opacity-[0.03] transition-all duration-700 scale-150 rotate-12 pointer-events-none group-hover:rotate-0">
-                  <item.icon className="w-96 h-96 text-white" />
+                <div className="absolute right-0 top-0 translate-x-1/4 -translate-y-1/4 opacity-0 group-hover:opacity-[0.05] transition-all duration-700 scale-150 rotate-12 pointer-events-none group-hover:rotate-0">
+                  <item.icon className="w-96 h-96 text-brand-green" />
                 </div>
 
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-10">
-                    <div className="w-20 h-20 rounded-2xl glass-gold flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-[0_0_30px_rgba(212,180,117,0.15)] bg-[#05100c] border-brand-gold/30">
-                      <item.icon className="text-brand-gold w-10 h-10 drop-shadow-lg" />
+                    <div className="w-20 h-20 rounded-2xl glass-gold flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-[0_4px_20px_rgba(180,83,9,0.15)] bg-white border-brand-gold/30">
+                      <item.icon className="text-brand-gold w-10 h-10 drop-shadow-sm" />
                     </div>
-                    <div className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-white/5 transition-all -translate-y-2 group-hover:translate-y-0 text-white cursor-pointer">
+                    <div className="w-10 h-10 rounded-full border border-foreground/5 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-foreground/5 transition-all -translate-y-2 group-hover:translate-y-0 text-foreground cursor-pointer">
                       <ArrowUpRight size={18} />
                     </div>
                   </div>
                   
                   <h5 className="text-sm font-bold text-brand-gold/80 uppercase tracking-widest mb-2">{item.subtitle}</h5>
-                  <h4 className="text-3xl font-bold text-white mb-6 tracking-tight">{item.title}</h4>
-                  <p className="text-white/60 text-lg leading-relaxed group-hover:text-white/80 transition-colors font-light">
+                  <h4 className="text-3xl font-bold text-foreground mb-6 tracking-tight">{item.title}</h4>
+                  <p className="text-foreground/60 text-lg leading-relaxed group-hover:text-foreground/80 transition-colors font-medium">
                     {item.description}
                   </p>
                 </div>

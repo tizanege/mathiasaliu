@@ -36,18 +36,18 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           <Link href="/" className="relative z-10 group flex items-center gap-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-brand-gold-light to-brand-gold bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-brand-gold to-yellow-800 bg-clip-text text-transparent">
               Hon. Mathias Aliu
             </span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8 glass px-8 py-3 rounded-full">
+          <div className="hidden md:flex items-center gap-8 glass border-foreground/5 shadow-sm px-8 py-3 rounded-full">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-white/80 hover:text-brand-gold transition-colors"
+                className="text-sm font-semibold text-foreground/70 hover:text-brand-gold transition-colors"
               >
                 {link.name}
               </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
           <div className="hidden md:flex relative z-10">
             <Link
               href="#join"
-              className="bg-brand-gold hover:bg-brand-gold-light text-brand-black px-6 py-3 rounded-full font-bold text-sm transition-all shadow-[0_0_20px_rgba(212,180,117,0.3)] hover:shadow-[0_0_30px_rgba(212,180,117,0.5)] transform hover:scale-105"
+              className="bg-brand-gold hover:bg-brand-gold/90 text-white px-6 py-3 rounded-full font-bold text-sm transition-all shadow-[0_4px_15px_rgba(180,83,9,0.2)] hover:shadow-[0_6px_20px_rgba(180,83,9,0.3)] transform hover:scale-105"
             >
               Join the Movement
             </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden relative z-10 text-white"
+            className="md:hidden relative z-10 text-foreground"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -80,7 +80,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-brand-dark/95 backdrop-blur-xl flex flex-col justify-center items-center gap-8"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center gap-8"
           >
             {navLinks.map((link, i) => (
               <motion.div
@@ -92,7 +92,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-3xl font-bold text-white/90 hover:text-brand-gold transition-colors"
+                  className="text-3xl font-bold text-foreground/90 hover:text-brand-gold transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -106,7 +106,7 @@ export default function Navbar() {
               <Link
                 href="#join"
                 onClick={() => setIsOpen(false)}
-                className="bg-brand-gold text-brand-black px-8 py-4 rounded-full font-bold text-lg mt-8 inline-block shadow-[0_0_30px_rgba(212,180,117,0.3)]"
+                className="bg-brand-gold text-white px-8 py-4 rounded-full font-bold text-lg mt-8 inline-block shadow-[0_10px_30px_rgba(180,83,9,0.2)]"
               >
                 Join the Movement
               </Link>
